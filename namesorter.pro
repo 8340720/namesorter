@@ -1,4 +1,6 @@
 TARGET = namesorter
+QT -= gui
+QT += core
 
 mac {
   QMAKE_APPLE_DEVICE_ARCHS = x86_64 arm64
@@ -26,17 +28,16 @@ win32 {
 }
 
 mac {
+  CONFIG += console
   CONFIG -= app_bundle
-}
+  QMAKE_APPLE_DEVICE_ARCHS = x86_64 arm64
 
-#QT += core
-#QT -= gui
+  QMAKE_LFLAGS += -Wl,-rpath,@executable_path/../lib
+}
 
 INCLUDEPATH += src
 
 HEADERS += src/namesorter.h
 
 SOURCES +=  src/main.cpp \
-	    src/namesorter.cpp
-
-
+            src/namesorter.cpp
