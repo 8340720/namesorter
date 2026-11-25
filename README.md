@@ -28,6 +28,8 @@ Available downloads:
 
 - `namesorter-linux-x86_64.tar.gz` - Linux application package.
 - `namesorter-linux-x86_64.tar.gz.sha256` - SHA-256 checksum for verifying the download.
+- `namesortertest-linux-x86_64.tar.gz` - Linux application package.
+- `namesortertest-linux-x86_64.tar.gz.sha256` - SHA-256 checksum for verifying the download.
 
 #### Installation
 
