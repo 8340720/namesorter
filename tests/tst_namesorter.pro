@@ -1,9 +1,10 @@
-TARGET = namesortertests 
+TARGET = namesortertests
+QT -= gui
+QT += core testlib
 
 mac {
   QMAKE_APPLE_DEVICE_ARCHS = x86_64 arm64
 }
-QT += testlib
 unix {
   QMAKE_CFLAGS   += -Wno-unused-variable
   QMAKE_CXXFLAGS += -Wno-unused-variable
@@ -26,16 +27,16 @@ win32 {
 }
 
 mac {
+  CONFIG  += console
   CONFIG -= app_bundle
 }
 
-CONFIG += console testcase
+CONFIG += testcase
 
 INCLUDEPATH += ../src
 
 SOURCES += tst_namesorter.cpp \
-	../src/namesorter.cpp
+        ../src/namesorter.cpp
 
 HEADERS += \
-	../src/namesorter.h
-
+        ../src/namesorter.h
