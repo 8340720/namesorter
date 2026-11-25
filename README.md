@@ -52,14 +52,14 @@ Names that compare equally retain their original order.
 
 From the project root:
 
-    qmake NameSorter.pro
+    qmake namesorter.pro
     make
 
 ## Run the application
 
 The input filename must be provided as a command-line argument.
 
-    ./NameSorter names-list.txt
+    ./namesorter names-list.txt
 
 The application:
 
@@ -74,18 +74,18 @@ The output file is created in the current working directory.
 
 From the tests directory:
 
-    qmake NameSorterTests.pro
+    qmake tst_namesorter.pro
     make
 
 ## Run unit tests
 
 From the tests directory:
 
-    ./NameSorterTests
+    ./namesortertests
 
 For more detailed test output:
 
-    ./NameSorterTests -v2
+    ./namesortertests -v2
 
 ## Error handling
 
@@ -95,4 +95,3 @@ The application reports errors if:
 - A name does not contain between 2 and 4 words.
 - The input file cannot be read.
 - The output file cannot be created or written.
-
