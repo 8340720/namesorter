@@ -209,14 +209,14 @@ private slots:
     {
         QStringList input = {
             "John Smith",
-            "John Smith",
-            "John Albert Smith"
+            "John Albert Smith",
+            "John Smith"
         };
 
         QStringList expected = {
-            "John Albert Smith",
             "John Smith",
-            "John Smith"
+            "John Smith",
+            "John Albert Smith"
         };
 
         QStringList result;
