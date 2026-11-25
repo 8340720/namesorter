@@ -1,97 +1,37 @@
 # NameSorter
 
-A simple Qt 6 C++ command-line application that sorts
-a list of people's names alphabetically.
+A simple Qt 6 C++ command-line application that sorts a list of people's names alphabetically.
 
-## Requirements
+## Downloads (Precompiled Binaries)
 
-- Qt 6
-- qmake
-- C++17 compatible compiler
-- make (or an appropriate platform build tool like cmake)
+Precompiled versions of NameSorter are available for macOS and Linux.
 
-## Input format
+Visit the [GitHub Releases](https://github.com/8340720/namesorter) page to download the appropriate version.
 
-The input file contains one person's name per line.
+### macOS
 
-Each name must contain:
-- One first name
-- Zero, one, or two middle names
-- One last name
+**Release:** NameSorter 1.0.0 for macOS
 
-Each name therefore contains between 2 and 4 words.
+Available downloads:
 
-Example:
+- `namesorter-macos.zip`
+- `namesortertest-macos.zip`
 
-    John Michael Smith
-    Mary Anderson
-    David William James Brown
-    Anne Wilson
+Download and extract the appropriate ZIP file.
 
-Blank lines are ignored.
+### Linux (x86_64)
 
-Invalid names cause the application to report an error.
+**Release:** NameSorter 1.0.0 for Linux
 
-## Sorting rules
+Available downloads:
 
-Names are sorted using the following order:
+- `namesorter-linux-x86_64.tar.gz`
+- `namesorter-linux-x86_64.tar.gz.sha256`
 
-1. Last name
-2. First given name
-3. Second given name
-4. Third given name
+#### Installation
 
-All comparisons are case-insensitive.
+Download and extract the archive:
 
-If all shared given names match, the name with fewer
-given names sorts first.
-
-Names that compare equally retain their original order.
-
-## Build the application
-
-From the project root:
-
-    qmake namesorter.pro
-    make
-
-## Run the application
-
-The input filename must be provided as a command-line argument.
-
-    ./namesorter names-list.txt
-
-The application:
-
-- Reads and validates the input file.
-- Sorts the names.
-- Prints the sorted names to the screen.
-- Creates or overwrites sorted-names-list.txt.
-
-The output file is created in the current working directory.
-
-## Build unit tests
-
-From the tests directory:
-
-    qmake tst_namesorter.pro
-    make
-
-## Run unit tests
-
-From the tests directory:
-
-    ./namesortertests
-
-For more detailed test output:
-
-    ./namesortertests -v2
-
-## Error handling
-
-The application reports errors if:
-
-- The input file cannot be opened.
-- A name does not contain between 2 and 4 words.
-- The input file cannot be read.
-- The output file cannot be created or written.
+```bash
+tar -xzf namesorter-linux-x86_64.tar.gz
+cd namesorter-linux-x86_64
